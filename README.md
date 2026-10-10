@@ -1,4 +1,10 @@
 # Stateful Button — Intentional Motion
+## Live Demo
+https://bolt.new/~/vitejs-vite-a2stacag
+
+## How to run locally
+npm install
+npm run dev
 
 A button component that choreographs state transitions (idle → hover → loading → success/error → idle) so the user always knows what's happening, without a single abrupt swap.
 
