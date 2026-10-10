@@ -26,3 +26,10 @@ A button component that choreographs state transitions (idle → hover → loadi
 - **Interruptible**: a request-id guard ignores stale async results; timers are cleared on re-click; the button is disabled during loading.
 - **prefers-reduced-motion**: all transforms, shake, spinner rotation, and checkmark draw are removed. Opacity transitions (150ms) and color changes remain so state is still communicated.
 - **Keyboard accessible**: `:focus-visible` ring, `aria-busy` during loading, `aria-hidden` on inactive label panels.
+
+## Motion Decisions
+250ms ease-out-quart was chosen because it feels responsive 
+without being jarring — fast enough to not feel sluggish, 
+slow enough to register as intentional. The 80ms cross-fade 
+delay ensures the outgoing label fully exits before the 
+incoming label enters, preventing visual overlap.
